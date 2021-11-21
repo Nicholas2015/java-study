@@ -10,7 +10,7 @@ import java.io.Serializable;
  *
  * 反序列化
  * 将持久化的字节码内容，通过IO输入流读到内存中
- *
+ * 转换成一个java对象
  */
 public class SerializabaleSingleton implements Serializable {
 
