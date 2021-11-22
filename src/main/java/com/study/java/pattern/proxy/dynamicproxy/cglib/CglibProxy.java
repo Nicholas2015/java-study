@@ -6,6 +6,9 @@ import net.sf.cglib.proxy.MethodProxy;
 
 import java.lang.reflect.Method;
 
+/**
+ * @author Administrator
+ */
 public class CglibProxy implements MethodInterceptor {
 
     public Object getInstance(Class<?> clazz) {
@@ -16,9 +19,9 @@ public class CglibProxy implements MethodInterceptor {
     }
 
     @Override
-    public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
+    public Object intercept(Object obj, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
         before();
-        Object result = methodProxy.invoke(o, objects);
+        Object result = methodProxy.invokeSuper(obj, args);
         after();
         return result;
     }
