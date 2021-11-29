@@ -1,6 +1,8 @@
 package com.study.java.pattern.proxy.dynamicproxy.cglib;
 
 
+import net.sf.cglib.core.DebuggingClassWriter;
+
 /**
  * 此处如果使用JDK16
  * JEP 396会默认把--illegal-access参数设置为deny，即默认禁用访问封装的包以及反射其他模块，
@@ -15,6 +17,10 @@ package com.study.java.pattern.proxy.dynamicproxy.cglib;
 public class CglibProxyTest {
 
     public static void main(String[] args) {
+
+        // cglib动态代理产生的类
+        // System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY,"D://cglib_proxy_class");
+
         CglibProxy cglibProxy = new CglibProxy();
 
         Keon keon = (Keon) cglibProxy.getInstance(Keon.class);

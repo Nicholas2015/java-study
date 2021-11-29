@@ -29,18 +29,23 @@ public class CustomProxy {
 
         // 3.把.java文件编译成$Proxy.class文件
         JavaCompiler javaCompiler = ToolProvider.getSystemJavaCompiler();
-        StandardJavaFileManager standardFileManager = javaCompiler.getStandardFileManager(null, null, null);
-        Iterable javaFileObjects = standardFileManager.getJavaFileObjects(file);
-        JavaCompiler.CompilationTask javaCompilerTask = javaCompiler.getTask(null, standardFileManager, null, null, null, javaFileObjects);
-        javaCompilerTask.call();
-        standardFileManager.close();
+        StandardJavaFileManager manager = javaCompiler.getStandardFileManager(null, null, null);
+        Iterable iterable = manager.getJavaFileObjects(file);
+        JavaCompiler.CompilationTask javaCompilerTask = javaCompiler.getTask(null, manager, null, null, null, iterable);
+        Boolean call = javaCompilerTask.call();
+        if(call){
+            System.out.println("生成成功");
+        } else{
+            System.out.println("生成失败");
+        }
+        manager.close();
 
         // 4.把生成的.class文件加载到JVM中
         Class<?> aClass = loader.findClass("$Proxy0");
         Constructor<?> constructor = aClass.getConstructor(CustomInvocationHandler.class);
 
         // 5.返回新的代理对象
-        return constructor.newInstance();
+        return constructor.newInstance(h);
     }
 
     private static String generatrSource(Class<?>[] interfaces){
