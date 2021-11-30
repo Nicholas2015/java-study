@@ -3,28 +3,28 @@ GOF是设计模式的经典名著Design Patterns: Elements of Reusable Object-Or
 23种设计模式
 
 ### 设计模式
-* [工厂模式（Singleton）](fatory/README.md)：
+* [工厂模式（Singleton）](./fatory/README.md)：
 某个类只能生成一个实例，该类提供了一个全局访问点供外部获取该实例，其拓展是有限多例模式。
 
-* [原型模式（Prototype）](prototype/README.md)：
+* [原型模式（Prototype）](./prototype/README.md)：
 将一个对象作为原型，通过对其进行复制而克隆出多个和原型类似的新实例。
 
-* [工厂方法模式（Factory Method）](fatory/README.md)：
+* [工厂方法模式（Factory Method）](./fatory/README.md)：
 定义一个用于创建产品的接口，由子类决定生产什么产品。
 
-* [抽象工厂模式（Abstract Factory）](fatory/README.md)：
+* [抽象工厂模式（Abstract Factory）](./fatory/README.md)：
 提供一个创建产品族的接口，其每个子类可以生产一系列相关的产品。
 
-* [建造者模式（Builder）](builder/README.md)：
+* [建造者模式（Builder）](./builder/README.md)：
 将一个复杂对象分解成多个相对简单的部分，然后根据不同需要分别创建它们，最后构建成该复杂对象。
 
-* 代理（Proxy）模式
+* [代理模式（Proxy）](./proxy/README.md)
 为某对象提供一种代理以控制对该对象的访问。即客户端通过代理间接地访问该对象，从而限制、增强或修改该对象的一些特性。
 
-* 适配器（Adapter）模式
+* [适配器模式（Adapter）](./adapter/README.md)
 将一个类的接口转换成客户希望的另外一个接口，使得原本由于接口不兼容而不能一起工作的那些类能一起工作。
 
-* 桥接（Bridge）模式
+* [桥接模式（Bridge）](./bridge/README.md)
 将抽象与实现分离，使它们可以独立变化。它是用组合关系代替继承关系来实现，从而降低了抽象和实现这两个可变维度的耦合度。
 
 * 装饰（Decorator）模式
