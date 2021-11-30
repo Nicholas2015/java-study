@@ -1,7 +1,7 @@
 package com.study.java.pattern.bridge.general;
 
 
-public class AbstractCourse implements ICourse {
+public abstract class AbstractCourse implements ICourse {
 
     private INote note;
     private IVideo video;
