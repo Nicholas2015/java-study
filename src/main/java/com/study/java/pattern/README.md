@@ -33,7 +33,7 @@ GOF是设计模式的经典名著Design Patterns: Elements of Reusable Object-Or
 * 外观（Facade）模式
 为多个复杂的子系统提供一个一致的接口，使这些子系统更加容易被访问。
 
-* 享元（Flyweight）模式
+* [享元模式（Flyweight）](./flyweight/README.md)
 运用共享技术来有效地支持大量细粒度对象的复用。
 
 * 组合（Composite）模式
