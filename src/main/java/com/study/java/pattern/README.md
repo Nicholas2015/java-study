@@ -36,10 +36,10 @@ GOF是设计模式的经典名著Design Patterns: Elements of Reusable Object-Or
 * [享元模式（Flyweight）](./flyweight/README.md)
 运用共享技术来有效地支持大量细粒度对象的复用。
 
-* 组合（Composite）模式
+* [组合模式（Composite）](./composite/README.md)
 将对象组合成树状层次结构，使用户对单个对象和组合对象具有一致的访问性。
 
-* 模板方法（TemplateMethod）模式
+* [模板方法模式（TemplateMethod）](./template/README.md)
 定义一个操作中的算法骨架，而将算法的一些步骤延迟到子类中，使得子类可以不改变该算法结构的情况下重定义该算法的某些特定步骤。
 
 * 策略（Strategy）模式
