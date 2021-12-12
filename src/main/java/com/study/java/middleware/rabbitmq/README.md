@@ -17,7 +17,7 @@
 
 
 ### 运转流程
-![img_2.png](img_2.png)
+![process.png](./process.png)
 
 * 生产这发送消息的过程
   * 生产者连接到RabbitMQ Broker，建立一个连接（Connection）,开启一个信道（Channel）
