@@ -28,3 +28,10 @@
   * 消费者确认（ack）接收到的消息
   * RabbitMQ从队列中删除相应已经被确认的消息
   * 关闭信道、关闭连接
+
+### 高可用方案
+* cluster
+![cluster-common.png](./cluster-common.png)
+同步元数据，不同步队列数据，如果存在一个节点挂掉，在该节点的数据就无法访问。
+* 镜像
+![cluster-image.png](./cluster-image.png)
