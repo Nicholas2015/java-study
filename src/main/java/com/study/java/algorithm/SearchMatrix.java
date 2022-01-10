@@ -26,11 +26,10 @@ package com.study.java.algorithm;
  */
 public class SearchMatrix {
 
-    private static final int min = -10 ^ 9;
-    private static final int max = 10 ^ 9;
+    private static final int min = (int) Math.pow(-10,9);
+    private static final int max = (int) Math.pow(10,9);
 
     public static boolean searchMatrix(int[][] matrix, int target) {
-
         if (min > target || max < target) {
             return false;
         }
@@ -46,7 +45,12 @@ public class SearchMatrix {
             }
             for (int j = 0; j < matrix[i].length; j++) {
                 if (min > matrix[i][j] || max < matrix[i][j]) {
+
                     return false;
+                }
+
+                if(matrix[i][j] == target) {
+                    return true;
                 }
             }
         }
@@ -55,7 +59,9 @@ public class SearchMatrix {
     }
 
     public static void main(String[] args) {
-        int[][] matrix = {{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}};
-        System.out.println(searchMatrix(matrix, 5));
+//        int[][] matrix = {{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}};
+
+        int[][] matrix = {{1,4,7,11,15},{2,5,8,12,19},{3,6,9,16,22},{10,13,14,17,24},{18,21,23,26,30}};
+        System.out.println(searchMatrix(matrix, 20));
     }
 }
