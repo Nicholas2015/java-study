@@ -20,7 +20,6 @@ public class Palindrome {
         if (b >= 'A' && b <= 'Z') {
             b += 32;
         }
-        System.out.println(a == b);
         return a == b;
     }
 
@@ -35,7 +34,6 @@ public class Palindrome {
             while (i < j && !isAlphanumeric(str.charAt(j))) {
                 j--;
             }
-            System.out.println(i + "===" + j);
             if (i < j && !ignoreCase(str.charAt(i), str.charAt(j))) {
                 return false;
             }
